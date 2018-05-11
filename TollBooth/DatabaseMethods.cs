@@ -42,7 +42,11 @@ namespace TollBooth
                 // TODO 5: Retrieve a List of LicensePlateDataDocument objects from the collectionLink where the exported value is false.
                 // COMPLETE: licensePlates = _client.CreateDocumentQuery ...
                 // TODO 6: Remove the line below.
-                licensePlates = new List<LicensePlateDataDocument>();
+                //licensePlates = new List<LicensePlateDataDocument>();
+                licensePlates = _client.CreateDocumentQuery<LicensePlateDataDocument>(collectionLink,
+                     new FeedOptions() { MaxItemCount = 100 })
+                     .Where(l => l.exported == false)
+                     .ToList();
             }
 
             exportedCount = licensePlates.Count();

@@ -4,6 +4,7 @@
   </PropertyGroup>
   <ItemGroup>    
     <PackageReference Include="CsvHelper" Version="6.1.0" />    
+    <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.6.1" />    
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="1.7.1" />    
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.EventGrid" Version="1.0.0-beta2" />    
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.7" />    
